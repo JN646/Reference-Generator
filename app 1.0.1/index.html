@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference Number Generator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./contents/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <script src="./contents/jquery/jquery-3.4.1.min.js"></script>
+    <style media="screen">
+      * {
+        font-family: 'Nunito', sans-serif;
+      }
+    </style>
+  </head>
+  <div class="container-fluid">
+    <body>
+      <h1>Reference Number Generator</h1>
+
+      <div class="row">
+        <div class="col">
+          <!-- Settings -->
+          <div class="card">
+            <h5 class="card-header">Settings</h5>
+            <div class="card-body">
+              <form class="form">
+                <input id="rndNumber" type="checkbox" name="rndNumber" value="yes">
+                <label for="rndNumber">Add Random Number</label>
+
+                <br>
+
+                <select id="forceCase" class="" name="forceCase">
+                  <option value="None">No Change</option>
+                  <option value="Uppercase">Uppercase</option>
+                  <option value="Lowercase">Lowercase</option>
+                </select>
+                <label for="forceLower">Force Case</label>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col text-center">
+          <img class="rounded border" src="./contents/images/A2B.jpg" width="256" height="256" />
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Input -->
+      <div class="card">
+        <h5 class="card-header">Input</h5>
+        <div class="card-body">
+          <form class="form">
+            <div class="row">
+              <div class="col">
+                <label for="firstName">First Name</label>
+                <input class="form-control" id="firstName" type="text" name="firstName" placeholder="John" value="">
+              </div>
+
+              <div class="col">
+                <label for="lastName">Last Name</label>
+                <input class="form-control" id="lastName" type="text" name="lastName" placeholder="Smith" value="">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label for="partNumber">Part Number</label>
+                <input class="form-control" id="partNumber" type="text" name="partNumber" placeholder="ABC123" value="">
+              </div>
+
+              <div class="col">
+                <label for="collectDate">Collection Date</label>
+                <input class="form-control" id="collectDate" type="date" name="collectDate" value="">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Generate -->
+      <div class="">
+        <form class="form">
+          <button class="form-control btn btn-success" id="btnGen" type="button" name="btnGen">Generate</button>
+        </form>
+      </div>
+
+      <!-- Output -->
+      <div class="my-4">
+        <h1 class='text-center display-4' id="result">N/A</h1>
+      </div>
+  </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script src="./gen.js"></script>
+  </body>
+  <footer class="text-center">
+    <hr>
+    <small>Copyright &copy; 2020 JGinn. All Rights Reserved. Version 1.0.1</small>
+  </footer>
+</html>
